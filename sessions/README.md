@@ -16,8 +16,8 @@ curl -s http://localhost:8080/secret
 # Output: "Forbidden"
 
 # Step 5: Logout (if you have a logout endpoint)
-curl -s -b cookies.txt http://localhost:8080/logout
+curl -s -c cookies.txt -b cookies.txt http://localhost:8080/logout
 
 # Step 6: Try secret again (should now fail)
 curl -s -b cookies.txt http://localhost:8080/secret
-# Output: "Forbidden"
+# Output: "Forbidden"git 
